@@ -11,11 +11,13 @@ createApp({
     methods: {
         getTodoList(){
             axios.get(this.url).then((resp) => {
-                this.todolist = resp.data;
+                console.log(resp.data);
+                this.todoList = resp.data;
+                console.log(this.todoList)
             });
         }
     },
     mounted() {
-        
+        this.getTodoList();
     },
 }).mount( '#app' )
