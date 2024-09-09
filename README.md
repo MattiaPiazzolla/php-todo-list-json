@@ -14,3 +14,12 @@ Bonus
 3 - Permettere di segnare un task come completato facendo click sul testo
 4 - Permettere il toggle del task (completato/non completato)
 6 - Abilitare l’eliminazione di un task
+
+<!-- SCOMPONGO IL PROBLEMA -->
+
+1-definisco la struttura base
+2-definisco l-applicazione vue in un file js
+3-nel file js vado a chiamare i dati dal server utilizzando axios
+4-definisco il file json che contiene i dati
+5-effettuo una chiamata al file server
+6-decodifico le informazioni e le mostro in console
