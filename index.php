@@ -15,10 +15,30 @@
 
 <body>
     <div id="app">
-
-    
+        <header class="bg-dark position-fixed">
+            <div class="container p-3">
+                <div class="row">
+                    <div class="col-12">
+                        <h3 class="text-center text-light">PHP ToDo List JSON</h3>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="container">
+                <div class="row justify-content-center align-items-center vh-100">
+                    <div class="col-12">
+                        <div class="card">
+                            <ul>
+                                <li v-for="item in todoList" :key="item.id">{{ item.name }} </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
     </div>
-    
+
     <script src="./js/script.js" type="text/javascript"></script>
 </body>
 
