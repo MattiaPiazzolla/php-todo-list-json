@@ -15,6 +15,7 @@ createApp({
             })
         },
         deleteTask(id){
+            
             const data = {
                 deleteTask: id
 
@@ -56,8 +57,7 @@ createApp({
             const data = {
                 toggleTask: id
             }
-
-            axios.post(this.serverUrl, data, { headers: { 'Content-Type': 'application/json' } }).then((result) => {
+            axios.post(this.serverUrl, data, { headers: { 'Content-Type': 'multipart/form-data' } }).then((result) => {
                 this.todolist = result.data
             })
         }

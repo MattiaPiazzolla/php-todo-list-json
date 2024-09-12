@@ -12,9 +12,7 @@ if (isset($_POST['addTask'])) {
     $todolist[] = $task;
     $string = json_encode($todolist);
     file_put_contents('./data/todolist.json', $string);
-}
-
-if (isset($_POST['deleteTask'])){
+} elseif (isset($_POST['deleteTask'])){
     foreach ($todolist as $index => $todo) {
         if($todo['id'] == $_POST['deleteTask']){
             array_splice($todolist, $index, 1); 
@@ -25,9 +23,9 @@ if (isset($_POST['deleteTask'])){
 }
 
 // chiedi come posso risolvere 
-if (isset($_GET['toggleTask'])){
+ elseif (isset($_POST['toggleTask'])){
     foreach ($todolist as $index => $todo) {
-        if($todo['id'] == $_GET['toggleTask']){
+        if($todo['id'] == $_POST['toggleTask']){
             $todolist[$index]['done'] = !$todolist[$index]['done'];
         }
     }
@@ -35,9 +33,9 @@ if (isset($_GET['toggleTask'])){
     file_put_contents('./data/todolist.json', $string); 
 }
 
-
-
 header('Content-Type: application/json');
 echo json_encode($todolist);
+
+
 
 ?>

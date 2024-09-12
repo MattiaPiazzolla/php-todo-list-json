@@ -38,6 +38,7 @@
                                         class=" w-100" @click="doneClick(todo.id)">
                                         {{ todo.name }}
                                     </span>
+
                                 </div>
                                 <button class=" btn text-light btn-danger" @click="deleteTask(todo.id)">
                                     <i class="bi bi-trash-fill"></i>
